@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <h2 class="title">Doc Editor</h2>
+            <div class="controls">
+                <div class="main-controls">
+                    <div class="dropdown">
+                        <button class="dropdown-btn">File</button>
+                        <div class="dropdown-menu">
+                            <button class="dropdown-item new-btn">New</button>
+                            <button class="dropdown-item txt-btn">
+                                Save as TXT
+                            </button>
+                            <button class="dropdown-item pdf-btn">
+                                Save as PDF
+                            </button>
+                        </div>
+                    </div>
+                    <input
+                        type="text"
+                        value="untitled"
+                        class="filename-input"
+                    />
+                </div>
+                <div class="control-btn-container">
+                    <button class="bold-btn"><b>b</b></button>
+                    <button class="underline-btn"><u>u</u></button>
+                    <button class="italic-btn"><i>i</i></button>
+                    <input type="color" class="color-btn" />
+                </div>
+            </div>
+            <div
+                class="content"
+                contenteditable="true"
+                spellcheck="false"
+            ></div>
+            <div class="counter-text">
+                <p class="length_char">Số ký tự: <span>0</span></p>
+                <p class="number_char">Số từ: <span>0</span></p>
+            </div>
+        </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+            integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+        <script src="main.js"></script>
+    </body>
+</html>
